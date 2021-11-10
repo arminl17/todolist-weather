@@ -1,0 +1,25 @@
+ 
+        <div className = "weather-wrapper">
+        <h1 className ="city">{city}</h1>
+        <h2 className ="temp">{Math.floor(temp)}°C</h2>
+        <hr className="line"></hr>
+        <div className ="left">
+            <h3 className ="desc"><img className="icon" src={`http://openweathermap.org/img/w/${icon}.png`} alt="imgIcon" /> {desc}</h3>
+            <li className="sunriseset">
+            <h3 className ="sunrise">{new Date(sunrise * 1000).toLocaleTimeString('en-IN')}</h3>
+            <td className ="time">Sunrise</td></li>
+            <li className="sunriseset">
+            <h3 className ="sunset">{new Date(sunset * 1000).toLocaleTimeString('en-IN')}</h3>
+            <td className ="time">Sunset</td>
+            </li>
+           
+            <li className="right">
+            <h2 className ="humidity">{humidity}</h2>
+            <td className ="time">Humidity</td></li>
+            <li className="right">
+            <h2 className ="wind">{wind} m/s</h2>
+            <td className ="time">Wind speed</td>
+            </li>
+        </div>
+
+        </div>
